@@ -1,0 +1,262 @@
+{
+  "category": "travel-insurance",
+  "title": "여행보험",
+  "description": "국내외 여행 중 발생할 수 있는 다양한 위험을 보장하는 여행보험 상품들입니다.",
+  "products": [
+    {
+      "id": "travel-001",
+      "name": "해외여행종합보험",
+      "subtitle": "해외여행 전용 종합 보장",
+      "description": "해외여행 중 발생할 수 있는 의료비, 여행취소, 항공기지연 등을 종합적으로 보장",
+      "features": [
+        "해외 의료비 보장",
+        "여행취소 보장",
+        "항공기지연 보장",
+        "여행자보험 보장",
+        "항공기 사고 보장"
+      ],
+      "coverage": {
+        "해외의료비": "1억원",
+        "여행취소": "500만원",
+        "항공기지연": "일 10만원",
+        "여행자보험": "1억원",
+        "항공기사고": "1억원"
+      },
+      "premium": {
+        "daily": 5000,
+        "weekly": 30000,
+        "monthly": 100000,
+        "discount": "장기 여행 시 할인"
+      },
+      "ageRange": "0-80세",
+      "waitingPeriod": "없음",
+      "exclusions": [
+        "전쟁 지역 여행",
+        "위험한 스포츠",
+        "고의로 인한 사고"
+      ],
+      "image": "overseas-travel.jpg",
+      "rating": 4.7,
+      "reviewCount": 2200,
+      "popularity": "best"
+    },
+    {
+      "id": "travel-002",
+      "name": "국내여행보험",
+      "subtitle": "국내여행 전용 보장",
+      "description": "국내 여행 중 발생할 수 있는 사고와 질병을 보장하는 상품",
+      "features": [
+        "국내 의료비 보장",
+        "여행취소 보장",
+        "교통사고 보장",
+        "도난 보장",
+        "여행중단 보장"
+      ],
+      "coverage": {
+        "국내의료비": "3000만원",
+        "여행취소": "300만원",
+        "교통사고": "5000만원",
+        "도난": "100만원",
+        "여행중단": "실손 100%"
+      },
+      "premium": {
+        "daily": 2000,
+        "weekly": 12000,
+        "monthly": 40000,
+        "discount": "가족 단위 할인"
+      },
+      "ageRange": "0-80세",
+      "waitingPeriod": "없음",
+      "exclusions": [
+        "고의로 인한 사고",
+        "범죄행위",
+        "위험한 레저스포츠"
+      ],
+      "image": "domestic-travel.jpg",
+      "rating": 4.5,
+      "reviewCount": 1800,
+      "popularity": "popular"
+    },
+    {
+      "id": "travel-003",
+      "name": "단기여행보험",
+      "subtitle": "1-3일 단기 여행 보장",
+      "description": "짧은 여행에 최적화된 경제적인 여행보험",
+      "features": [
+        "기본 의료비 보장",
+        "여행취소 보장",
+        "항공기지연 보장",
+        "간편한 가입",
+        "저렴한 보험료"
+      ],
+      "coverage": {
+        "의료비": "2000만원",
+        "여행취소": "200만원",
+        "항공기지연": "일 5만원"
+      },
+      "premium": {
+        "daily": 1500,
+        "discount": "3일 이상 시 할인"
+      },
+      "ageRange": "0-80세",
+      "waitingPeriod": "없음",
+      "exclusions": [
+        "고의로 인한 사고",
+        "위험한 스포츠"
+      ],
+      "image": "short-travel.jpg",
+      "rating": 4.3,
+      "reviewCount": 950,
+      "popularity": "standard"
+    },
+    {
+      "id": "travel-004",
+      "name": "장기여행보험",
+      "subtitle": "장기 해외여행 전용 보장",
+      "description": "1개월 이상의 장기 해외여행에 특화된 보험",
+      "features": [
+        "장기 의료비 보장",
+        "만성질환 보장",
+        "치과치료 보장",
+        "약물치료 보장",
+        "재입국 비용 보장"
+      ],
+      "coverage": {
+        "장기의료비": "2억원",
+        "만성질환": "5000만원",
+        "치과치료": "1000만원",
+        "약물치료": "실손 100%",
+        "재입국비용": "실손 100%"
+      },
+      "premium": {
+        "monthly": 80000,
+        "quarterly": 220000,
+        "yearly": 800000,
+        "discount": "장기 가입 시 할인"
+      },
+      "ageRange": "0-70세",
+      "waitingPeriod": "30일",
+      "exclusions": [
+        "기존 질환",
+        "전쟁 지역",
+        "위험한 스포츠"
+      ],
+      "image": "long-travel.jpg",
+      "rating": 4.6,
+      "reviewCount": 680,
+      "popularity": "standard"
+    },
+    {
+      "id": "travel-005",
+      "name": "레저스포츠보험",
+      "subtitle": "레저스포츠 전용 보장",
+      "description": "스키, 스쿠버다이빙 등 레저스포츠 활동을 위한 특별 보장",
+      "features": [
+        "레저스포츠 사고 보장",
+        "장비 손해 보장",
+        "구조비용 보장",
+        "의료비 보장",
+        "장애 보장"
+      ],
+      "coverage": {
+        "레저사고": "1억원",
+        "장비손해": "500만원",
+        "구조비용": "실손 100%",
+        "의료비": "5000만원",
+        "장애": "1억원"
+      },
+      "premium": {
+        "daily": 8000,
+        "weekly": 45000,
+        "monthly": 150000,
+        "discount": "장기 가입 시 할인"
+      },
+      "ageRange": "18-65세",
+      "waitingPeriod": "없음",
+      "exclusions": [
+        "전문가 수준의 스포츠",
+        "고의로 인한 사고",
+        "무면허 활동"
+      ],
+      "image": "leisure-sports.jpg",
+      "rating": 4.4,
+      "reviewCount": 420,
+      "popularity": "standard"
+    },
+    {
+      "id": "travel-006",
+      "name": "가족여행보험",
+      "subtitle": "가족 단위 여행 보장",
+      "description": "가족 전체가 함께 가입할 수 있는 경제적인 여행보험",
+      "features": [
+        "가족 전체 보장",
+        "아동 특별 보장",
+        "가족 할인 적용",
+        "의료비 보장",
+        "여행취소 보장"
+      ],
+      "coverage": {
+        "가족의료비": "1억원",
+        "아동의료비": "5000만원",
+        "여행취소": "가족당 300만원",
+        "항공기지연": "가족당 일 10만원"
+      },
+      "premium": {
+        "daily": 3000,
+        "weekly": 18000,
+        "monthly": 60000,
+        "discount": "가족 할인 20%"
+      },
+      "ageRange": "0-80세",
+      "waitingPeriod": "없음",
+      "exclusions": [
+        "고의로 인한 사고",
+        "위험한 스포츠"
+      ],
+      "image": "family-travel.jpg",
+      "rating": 4.8,
+      "reviewCount": 1500,
+      "popularity": "popular"
+    }
+  ],
+  "categories": [
+    {
+      "id": "overseas",
+      "name": "해외여행",
+      "description": "해외여행 전용 보험 상품들"
+    },
+    {
+      "id": "domestic",
+      "name": "국내여행",
+      "description": "국내여행 전용 보험 상품들"
+    },
+    {
+      "id": "short-term",
+      "name": "단기여행",
+      "description": "1-3일 단기 여행 보험"
+    },
+    {
+      "id": "long-term",
+      "name": "장기여행",
+      "description": "1개월 이상 장기 여행 보험"
+    },
+    {
+      "id": "leisure",
+      "name": "레저스포츠",
+      "description": "레저스포츠 전용 보험"
+    },
+    {
+      "id": "family",
+      "name": "가족여행",
+      "description": "가족 단위 여행 보험"
+    }
+  ],
+  "features": [
+    "24시간 긴급지원",
+    "다국어 지원",
+    "현지 병원 연계",
+    "항공사 연계",
+    "호텔 연계"
+  ],
+  "notice": "여행보험은 여행 출발 전에 가입해야 하며, 일부 지역은 보장이 제한될 수 있습니다."
+} 

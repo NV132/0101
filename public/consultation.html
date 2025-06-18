@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko" class="theme-light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="전문 상담사와 1:1 상담을 예약하세요 - 맞춤형 보험 상담 서비스">
+    <meta name="keywords" content="보험상담, 상담예약, 전문상담사, 무료상담">
+    <title>상담예약 - 안전한 보험</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/themes.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/chatbot.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">상담 예약 페이지를 준비하고 있습니다...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>안전한 보험</span>
+            </div>
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="products.html">보험상품</a></li>
+                    <li><a href="consultation.html" class="active">상담예약</a></li>
+                    <li><a href="faq.html">자주묻는질문</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="테마 변경">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="chatbot-toggle" aria-label="챗봇 열기">
+                    <i class="fas fa-comments"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">상담 예약</h1>
+                <p class="page-description">
+                    전문 상담사와 1:1 상담을 통해 최적의 보험을 찾아보세요
+                </p>
+            </div>
+        </section>
+
+        <!-- Consultation Info Section -->
+        <section class="consultation-info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="info-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>전문 상담사</h3>
+                        <p>10년 이상의 경력을 가진 전문 상담사가 맞춤형 보험을 추천해드립니다.</p>
+                    </div>
+                    <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>유연한 시간</h3>
+                        <p>평일 오전 9시부터 오후 6시까지, 원하시는 시간에 상담을 받으실 수 있습니다.</p>
+                    </div>
+                    <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="info-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3>무료 상담</h3>
+                        <p>상담은 완전 무료이며, 가입 의무가 없습니다. 편안하게 상담받으세요.</p>
+                    </div>
+                    <div class="info-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>다양한 방법</h3>
+                        <p>대면 상담, 전화 상담, 화상 상담 등 원하시는 방법으로 상담받으실 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultation Form Section -->
+        <section class="consultation-form-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>상담 예약하기</h2>
+                        <p>아래 정보를 입력하시면 빠른 시일 내에 연락드리겠습니다.</p>
+                    </div>
+                    
+                    <form class="consultation-form" id="consultation-form">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-user"></i>
+                                기본 정보
+                            </h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">이름 *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">연락처 *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">이메일</label>
+                                    <input type="email" id="email" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="age">나이</label>
+                                    <input type="number" id="age" name="age" min="1" max="100">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Consultation Preferences -->
+                        <div class="form-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-calendar-alt"></i>
+                                상담 일정
+                            </h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="consultation-date">희망 상담일 *</label>
+                                    <input type="date" id="consultation-date" name="consultation-date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="consultation-time">희망 시간 *</label>
+                                    <select id="consultation-time" name="consultation-time" required>
+                                        <option value="">시간을 선택하세요</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="consultation-method">상담 방법 *</label>
+                                <select id="consultation-method" name="consultation-method" required>
+                                    <option value="">상담 방법을 선택하세요</option>
+                                    <option value="face-to-face">대면 상담</option>
+                                    <option value="phone">전화 상담</option>
+                                    <option value="video">화상 상담</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Insurance Interests -->
+                        <div class="form-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-shield-alt"></i>
+                                관심 보험
+                            </h3>
+                            <div class="form-group">
+                                <label>관심 있는 보험 (복수 선택 가능)</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="life">
+                                        <span class="checkmark"></span>
+                                        <i class="fas fa-heart"></i>
+                                        생명보험
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="health">
+                                        <span class="checkmark"></span>
+                                        <i class="fas fa-user-md"></i>
+                                        건강보험
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="auto">
+                                        <span class="checkmark"></span>
+                                        <i class="fas fa-car"></i>
+                                        자동차보험
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="home">
+                                        <span class="checkmark"></span>
+                                        <i class="fas fa-home"></i>
+                                        주택보험
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="travel">
+                                        <span class="checkmark"></span>
+                                        <i class="fas fa-plane"></i>
+                                        여행보험
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="other">
+                                        <span class="checkmark"></span>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                        기타
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Consultation Details -->
+                        <div class="form-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-comments"></i>
+                                상담 내용
+                            </h3>
+                            <div class="form-group">
+                                <label for="consultation-purpose">상담 목적</label>
+                                <select id="consultation-purpose" name="consultation-purpose">
+                                    <option value="">선택하세요</option>
+                                    <option value="new">신규 가입</option>
+                                    <option value="change">보험 변경</option>
+                                    <option value="compare">보험 비교</option>
+                                    <option value="claim">보험금 청구</option>
+                                    <option value="other">기타</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">상담하고 싶은 내용</label>
+                                <textarea id="message" name="message" rows="5" placeholder="상담하고 싶은 내용을 자유롭게 적어주세요. 예: 현재 가입 중인 보험, 특별히 궁금한 점, 예산 등"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Privacy Agreement -->
+                        <div class="form-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-shield-alt"></i>
+                                개인정보 처리방침
+                            </h3>
+                            <div class="form-group">
+                                <label class="checkbox-item required">
+                                    <input type="checkbox" id="privacy-agreement" name="privacy-agreement" required>
+                                    <span class="checkmark"></span>
+                                    <span class="agreement-text">
+                                        개인정보 수집 및 이용에 동의합니다. 
+                                        <button type="button" class="link-btn" data-action="show-privacy-policy">자세히 보기</button>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="marketing-agreement" name="marketing-agreement">
+                                    <span class="checkmark"></span>
+                                    <span class="agreement-text">
+                                        마케팅 정보 수신에 동의합니다. (선택사항)
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" id="reset-form">
+                                <i class="fas fa-undo"></i>
+                                초기화
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-calendar-check"></i>
+                                상담 예약하기
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Available Consultants Section -->
+        <section class="consultants-section">
+            <div class="container">
+                <h2 class="section-title">전문 상담사 소개</h2>
+                <div class="consultants-grid">
+                    <div class="consultant-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="consultant-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="consultant-info">
+                            <h3>김상담</h3>
+                            <p class="consultant-title">수석 상담사</p>
+                            <p class="consultant-experience">15년 경력</p>
+                            <div class="consultant-specialties">
+                                <span class="specialty-tag">생명보험</span>
+                                <span class="specialty-tag">건강보험</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="consultant-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="consultant-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="consultant-info">
+                            <h3>이보험</h3>
+                            <p class="consultant-title">고급 상담사</p>
+                            <p class="consultant-experience">12년 경력</p>
+                            <div class="consultant-specialties">
+                                <span class="specialty-tag">자동차보험</span>
+                                <span class="specialty-tag">주택보험</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="consultant-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="consultant-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="consultant-info">
+                            <h3>박전문</h3>
+                            <p class="consultant-title">전문 상담사</p>
+                            <p class="consultant-experience">8년 경력</p>
+                            <div class="consultant-specialties">
+                                <span class="specialty-tag">여행보험</span>
+                                <span class="specialty-tag">실비보험</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="consultation-faq-section">
+            <div class="container">
+                <h2 class="section-title">자주 묻는 질문</h2>
+                <div class="faq-list">
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="faq-question">
+                            <h3>상담은 정말 무료인가요?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>네, 상담은 완전 무료입니다. 가입 의무도 없으니 편안하게 상담받으세요.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="faq-question">
+                            <h3>상담 시간은 얼마나 걸리나요?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>일반적으로 30분에서 1시간 정도 소요됩니다. 상담 내용에 따라 조정 가능합니다.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="faq-question">
+                            <h3>상담 예약을 취소할 수 있나요?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>네, 상담 24시간 전까지 언제든지 취소 가능합니다. 전화나 이메일로 연락주세요.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="faq-question">
+                            <h3>상담 후 바로 가입할 수 있나요?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>상담 후 충분히 검토하신 후 결정하시면 됩니다. 급하게 가입하실 필요는 없습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>홈</span>
+            </a>
+            <a href="products.html" class="nav-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>보험상품</span>
+            </a>
+            <a href="consultation.html" class="nav-item active">
+                <i class="fas fa-calendar-alt"></i>
+                <span>상담예약</span>
+            </a>
+            <a href="faq.html" class="nav-item">
+                <i class="fas fa-question-circle"></i>
+                <span>자주묻는질문</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <i class="fas fa-robot"></i>
+                <span>보험 상담 도우미</span>
+            </div>
+            <button class="chatbot-close" aria-label="챗봇 닫기">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    안녕하세요! 상담 예약에 대해 궁금한 점이 있으시면 언제든지 물어보세요.
+                </div>
+                <div class="message-time">지금</div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input" placeholder="메시지를 입력하세요..." maxlength="500">
+            <button class="chatbot-send" aria-label="메시지 전송">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    
+    <!-- Privacy Policy Modal -->
+    <div class="modal" id="privacy-policy-modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h3>개인정보 처리방침</h3>
+                <button class="modal-close" aria-label="모달 닫기">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="privacy-content">
+                    <h4>1. 개인정보의 수집 및 이용 목적</h4>
+                    <p>상담 예약 및 보험 상담 서비스 제공을 위해 개인정보를 수집합니다.</p>
+                    
+                    <h4>2. 수집하는 개인정보 항목</h4>
+                    <ul>
+                        <li>필수항목: 이름, 연락처, 상담 일정</li>
+                        <li>선택항목: 이메일, 나이, 상담 내용</li>
+                    </ul>
+                    
+                    <h4>3. 개인정보의 보유 및 이용기간</h4>
+                    <p>상담 완료 후 1년간 보관 후 파기합니다.</p>
+                    
+                    <h4>4. 개인정보의 제3자 제공</h4>
+                    <p>고객의 동의 없이 제3자에게 개인정보를 제공하지 않습니다.</p>
+                    
+                    <h4>5. 개인정보의 파기</h4>
+                    <p>보유기간 경과 후 안전한 방법으로 파기합니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>예약 완료</h3>
+                <button class="modal-close" aria-label="모달 닫기">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="success-content">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>상담 예약이 완료되었습니다!</h4>
+                    <p>입력하신 연락처로 상담 일정을 확인해드리겠습니다.</p>
+                    <div class="success-details" id="success-details">
+                        <!-- Reservation details will be shown here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="/assets/js/utils.js"></script>
+    <script src="/assets/js/store/state.js"></script>
+    <script src="/assets/js/store/actions.js"></script>
+    <script src="/assets/js/store/reducers.js"></script>
+    <script src="/assets/js/chatbot.js"></script>
+    <script src="/assets/js/app.js"></script>
+</body>
+</html> 

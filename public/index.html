@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko" class="theme-light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="신뢰할 수 있는 보험 서비스 - 맞춤형 보험 상품과 전문 상담을 제공합니다">
+    <meta name="keywords" content="보험, 생명보험, 자동차보험, 건강보험, 상담">
+    <title>안전한 보험 - 신뢰할 수 있는 보험 파트너</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/themes.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/chatbot.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">안전한 보험을 준비하고 있습니다...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>안전한 보험</span>
+            </div>
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html" class="active">홈</a></li>
+                    <li><a href="products.html">보험상품</a></li>
+                    <li><a href="consultation.html">상담예약</a></li>
+                    <li><a href="faq.html">자주묻는질문</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="테마 변경">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="chatbot-toggle" aria-label="챗봇 열기">
+                    <i class="fas fa-comments"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="particles-container" id="particles"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">신뢰할 수 있는</span>
+                        <span class="title-line highlight">보험 파트너</span>
+                    </h1>
+                    <p class="hero-description">
+                        맞춤형 보험 상품으로 당신의 미래를 안전하게 보호하세요.
+                        전문 상담사가 최적의 보험을 찾아드립니다.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-large" data-action="scroll-to-products">
+                            <i class="fas fa-search"></i>
+                            보험상품 보기
+                        </button>
+                        <button class="btn btn-secondary btn-large" data-action="open-consultation">
+                            <i class="fas fa-calendar-alt"></i>
+                            상담 예약하기
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">왜 안전한 보험을 선택해야 할까요?</h2>
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>전문 상담사</h3>
+                        <p>10년 이상의 경력을 가진 전문 상담사가 맞춤형 보험을 추천해드립니다.</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>최적의 보험료</h3>
+                        <p>다양한 보험사와 비교하여 가장 합리적인 보험료를 제공합니다.</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24시간 고객지원</h3>
+                        <p>언제든지 문의하실 수 있도록 24시간 고객지원 서비스를 제공합니다.</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>안전한 보장</h3>
+                        <p>신뢰할 수 있는 보험사와의 제휴로 안전하고 확실한 보장을 제공합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Products Section -->
+        <section class="popular-products-section">
+            <div class="container">
+                <h2 class="section-title">인기 보험 상품</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>생명보험</h3>
+                        <p>가족을 위한 안전한 미래 보장</p>
+                        <button class="btn btn-outline" data-action="view-product" data-product="life">자세히 보기</button>
+                    </div>
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>자동차보험</h3>
+                        <p>안전한 운전을 위한 필수 보험</p>
+                        <button class="btn btn-outline" data-action="view-product" data-product="auto">자세히 보기</button>
+                    </div>
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="product-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>주택보험</h3>
+                        <p>소중한 집을 보호하는 보험</p>
+                        <button class="btn btn-outline" data-action="view-product" data-product="home">자세히 보기</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">고객 후기</h2>
+                <div class="testimonials-slider" id="testimonials-slider">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <p>"안전한 보험 덕분에 가족을 위한 완벽한 보험을 찾을 수 있었습니다. 상담사님이 정말 친절하고 전문적이었어요."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>김민수</h4>
+                                <span>회사원, 35세</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"보험료 비교가 정말 쉬웠고, 최적의 조건으로 가입할 수 있었습니다. 추천합니다!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>이영희</h4>
+                                <span>자영업자, 42세</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"24시간 고객지원이 정말 편리했고, 언제든지 궁금한 점을 물어볼 수 있어서 좋았습니다."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>박철수</h4>
+                                <span>대학생, 23세</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn prev" aria-label="이전 후기">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="testimonial-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="testimonial-btn next" aria-label="다음 후기">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>지금 바로 상담을 받아보세요</h2>
+                    <p>전문 상담사가 당신에게 최적의 보험을 찾아드립니다</p>
+                    <button class="btn btn-primary btn-large" data-action="open-consultation">
+                        <i class="fas fa-calendar-alt"></i>
+                        무료 상담 예약하기
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>홈</span>
+            </a>
+            <a href="products.html" class="nav-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>보험상품</span>
+            </a>
+            <a href="consultation.html" class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>상담예약</span>
+            </a>
+            <a href="faq.html" class="nav-item">
+                <i class="fas fa-question-circle"></i>
+                <span>자주묻는질문</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <i class="fas fa-robot"></i>
+                <span>보험 상담 도우미</span>
+            </div>
+            <button class="chatbot-close" aria-label="챗봇 닫기">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    안녕하세요! 안전한 보험 상담 도우미입니다. 
+                    궁금한 점이 있으시면 언제든지 물어보세요.
+                </div>
+                <div class="message-time">지금</div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input" placeholder="메시지를 입력하세요..." maxlength="500">
+            <button class="chatbot-send" aria-label="메시지 전송">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    
+    <!-- Product Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">보험 상품 상세</h3>
+                <button class="modal-close" aria-label="모달 닫기">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Consultation Modal -->
+    <div class="modal" id="consultation-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>상담 예약</h3>
+                <button class="modal-close" aria-label="모달 닫기">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="consultation-form" id="consultation-form">
+                    <div class="form-group">
+                        <label for="consultation-name">이름 *</label>
+                        <input type="text" id="consultation-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-phone">연락처 *</label>
+                        <input type="tel" id="consultation-phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-email">이메일</label>
+                        <input type="email" id="consultation-email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-date">희망 상담일 *</label>
+                        <input type="date" id="consultation-date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-time">희망 시간 *</label>
+                        <select id="consultation-time" name="time" required>
+                            <option value="">시간을 선택하세요</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-message">상담 내용</label>
+                        <textarea id="consultation-message" name="message" rows="4" placeholder="상담하고 싶은 내용을 간단히 적어주세요"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-calendar-check"></i>
+                            예약하기
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>예약 완료</h3>
+                <button class="modal-close" aria-label="모달 닫기">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="success-content">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>상담 예약이 완료되었습니다!</h4>
+                    <p>입력하신 연락처로 상담 일정을 확인해드리겠습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="/assets/js/utils.js"></script>
+    <script src="/assets/js/store/state.js"></script>
+    <script src="/assets/js/store/actions.js"></script>
+    <script src="/assets/js/store/reducers.js"></script>
+    <script src="/assets/js/particles.js"></script>
+    <script src="/assets/js/chatbot.js"></script>
+    <script src="/assets/js/app.js"></script>
+</body>
+</html> 

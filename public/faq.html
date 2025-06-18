@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko" class="theme-light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="보험에 대한 자주 묻는 질문과 답변을 확인하세요 - 보험 가입, 청구, 상담 등">
+    <meta name="keywords" content="보험FAQ, 자주묻는질문, 보험가입, 보험청구, 보험상담">
+    <title>자주묻는질문 - 안전한 보험</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/themes.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/chatbot.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">FAQ 페이지를 준비하고 있습니다...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>안전한 보험</span>
+            </div>
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="products.html">보험상품</a></li>
+                    <li><a href="consultation.html">상담예약</a></li>
+                    <li><a href="faq.html" class="active">자주묻는질문</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="테마 변경">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="chatbot-toggle" aria-label="챗봇 열기">
+                    <i class="fas fa-comments"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">자주 묻는 질문</h1>
+                <p class="page-description">
+                    보험에 대한 궁금한 점을 빠르게 찾아보세요
+                </p>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="faq-search" placeholder="궁금한 내용을 검색해보세요..." maxlength="100">
+                        <button class="search-clear" id="search-clear" aria-label="검색어 지우기">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="search-stats">
+                        <span id="search-results-count">총 <strong>0</strong>개의 질문</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Filter -->
+        <section class="category-filter-section">
+            <div class="container">
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="all">
+                        <i class="fas fa-th"></i>
+                        전체
+                    </button>
+                    <button class="category-tab" data-category="general">
+                        <i class="fas fa-info-circle"></i>
+                        일반
+                    </button>
+                    <button class="category-tab" data-category="life">
+                        <i class="fas fa-heart"></i>
+                        생명보험
+                    </button>
+                    <button class="category-tab" data-category="health">
+                        <i class="fas fa-user-md"></i>
+                        건강보험
+                    </button>
+                    <button class="category-tab" data-category="auto">
+                        <i class="fas fa-car"></i>
+                        자동차보험
+                    </button>
+                    <button class="category-tab" data-category="claim">
+                        <i class="fas fa-file-alt"></i>
+                        보험금청구
+                    </button>
+                    <button class="category-tab" data-category="consultation">
+                        <i class="fas fa-calendar-alt"></i>
+                        상담
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Content -->
+        <section class="faq-content-section">
+            <div class="container">
+                <div class="faq-container">
+                    <!-- General FAQ -->
+                    <div class="faq-category" data-category="general">
+                        <h2 class="category-title">일반 질문</h2>
+                        <div class="faq-list">
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                                <div class="faq-question">
+                                    <h3>보험은 왜 필요한가요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>보험은 예상치 못한 사고나 질병으로 인한 경제적 손실을 보장해주는 안전장치입니다. 가족의 미래를 보호하고 안정적인 생활을 유지할 수 있도록 도와줍니다.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="faq-question">
+                                    <h3>보험료는 어떻게 결정되나요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>보험료는 나이, 성별, 건강상태, 보장금액, 보험기간, 직업 등 다양한 요인을 종합적으로 고려하여 결정됩니다. 위험이 높을수록 보험료도 높아집니다.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="faq-question">
+                                    <h3>보험 가입 후 언제부터 보장이 시작되나요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>보험 가입 후 첫 보험료를 납입하면 즉시 보장이 시작됩니다. 단, 일부 보험의 경우 가입 후 일정 기간(보험료 납입 후 24시간~30일)이 지나야 보장이 시작되는 경우도 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Life Insurance FAQ -->
+                    <div class="faq-category" data-category="life">
+                        <h2 class="category-title">생명보험</h2>
+                        <div class="faq-list">
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                                <div class="faq-question">
+                                    <h3>생명보험과 사망보험은 같은 것인가요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>생명보험은 사망보험을 포함한 더 넓은 개념입니다. 생명보험에는 사망보험, 생존보험, 혼합보험 등이 포함되며, 사망보험은 피보험자가 사망했을 때만 보험금을 지급하는 보험입니다.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="faq-question">
+                                    <h3>생명보험 가입 시 건강검진이 필수인가요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>보장금액과 나이에 따라 다릅니다. 일반적으로 보장금액이 높거나 나이가 많은 경우 건강검진이 필요할 수 있습니다. 간편가입 상품의 경우 건강검진 없이도 가입 가능합니다.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="faq-question">
+                                    <h3>생명보험 해지 시 환급금은 언제 받을 수 있나요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>해지환급금은 보험 해지 신청 후 약 3-5일 내에 지급됩니다. 단, 해지환급금이 있는 경우에만 지급되며, 보험료 납입 기간이 짧거나 보장금액이 높은 경우 해지환급금이 없을 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Health Insurance FAQ -->
+                    <div class="faq-category" data-category="health">
+                        <h2 class="category-title">건강보험</h2>
+                        <div class="faq-list">
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                                <div class="faq-question">
+                                    <h3>실비보험과 진단비보험의 차이점은 무엇인가요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>실비보험은 실제 의료비를 보장하는 보험이고, 진단비보험은 특정 질병에 진단받았을 때 일정 금액을 지급하는 보험입니다. 실비보험은 의료비 부담을 줄여주고, 진단비보험은 진단 시점에 일시금을 제공합니다.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="faq-question">
+                                    <h3>건강보험 가입 후 바로 보장받을 수 있나요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>일반적으로 가입 후 90일의 면책기간이 있습니다. 면책기간 중에는 보장받을 수 없으며, 면책기간이 지난 후부터 보장이 시작됩니다. 단, 사고로 인한 입원의 경우 면책기간이 적용되지 않을 수 있습니다.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="faq-question">
+                                    <h3>건강보험 청구 시 필요한 서류는 무엇인가요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>진단서, 소견서, 처방전, 영수증 등이 필요합니다. 보험사마다 요구하는 서류가 다를 수 있으므로 청구 전에 보험사에 문의하시는 것이 좋습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Auto Insurance FAQ -->
+                    <div class="faq-category" data-category="auto">
+                        <h2 class="category-title">자동차보험</h2>
+                        <div class="faq-list">
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                                <div class="faq-question">
+                                    <h3>자동차보험은 언제 갱신해야 하나요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>자동차보험은 보험기간 만료 1개월 전부터 갱신이 가능합니다. 만료일 전에 갱신하지 않으면 보장이 중단될 수 있으므로 미리 갱신하시는 것이 좋습니다.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="faq-question">
+                                    <h3>사고 발생 시 어떻게 해야 하나요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>사고 발생 시 즉시 119(응급), 112(경찰)에 신고하고, 보험사에 사고 접수를 해야 합니다. 사고 현장을 사진으로 촬영하고 상대방 정보를 확인하는 것도 중요합니다.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="faq-question">
+                                    <h3>무사고 할증이 무엇인가요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>무사고 할증은 사고가 없었던 기간에 따라 보험료를 할인해주는 제도입니다. 사고가 없을수록 할인율이 높아지며, 사고가 발생하면 할증율이 적용됩니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Claim FAQ -->
+                    <div class="faq-category" data-category="claim">
+                        <h2 class="category-title">보험금청구</h2>
+                        <div class="faq-list">
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                                <div class="faq-question">
+                                    <h3>보험금 청구는 언제까지 해야 하나요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>보험금 청구권은 보험사고 발생 후 3년이 지나면 소멸됩니다. 가능한 한 빨리 청구하시는 것이 좋으며, 복잡한 사고의 경우 전문가와 상담하시는 것을 권장합니다.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="faq-question">
+                                    <h3>보험금 청구가 거절된 경우 어떻게 해야 하나요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>보험금 청구가 거절된 경우, 거절 사유를 확인하고 추가 서류를 제출하거나 이의신청을 할 수 있습니다. 분쟁이 지속되는 경우 금융감독원이나 소비자분쟁조정위원회에 조정을 신청할 수 있습니다.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="faq-question">
+                                    <h3>보험금은 언제 지급되나요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>보험금은 청구 서류 접수 후 약 10-15일 내에 지급됩니다. 단, 복잡한 사고나 추가 서류가 필요한 경우 더 오래 걸릴 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Consultation FAQ -->
+                    <div class="faq-category" data-category="consultation">
+                        <h2 class="category-title">상담</h2>
+                        <div class="faq-list">
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                                <div class="faq-question">
+                                    <h3>상담은 정말 무료인가요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>네, 상담은 완전 무료입니다. 가입 의무도 없으니 편안하게 상담받으세요. 전문 상담사가 최적의 보험을 추천해드립니다.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="faq-question">
+                                    <h3>상담 예약을 취소할 수 있나요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>네, 상담 24시간 전까지 언제든지 취소 가능합니다. 전화나 이메일로 연락주시면 됩니다.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="faq-question">
+                                    <h3>상담 시간은 얼마나 걸리나요?</h3>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>일반적으로 30분에서 1시간 정도 소요됩니다. 상담 내용에 따라 조정 가능하니 편안하게 상담받으세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results Message -->
+                <div class="no-results" id="no-results" style="display: none;">
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>검색 결과가 없습니다</h3>
+                        <p>다른 키워드로 검색해보세요</p>
+                        <button class="btn btn-primary" id="clear-search">
+                            <i class="fas fa-undo"></i>
+                            검색 초기화
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>더 궁금한 점이 있으신가요?</h2>
+                    <p>전문 상담사가 직접 답변해드립니다</p>
+                    <div class="contact-actions">
+                        <button class="btn btn-primary btn-large" data-action="open-consultation">
+                            <i class="fas fa-calendar-alt"></i>
+                            상담 예약하기
+                        </button>
+                        <button class="btn btn-secondary btn-large" data-action="open-chatbot">
+                            <i class="fas fa-comments"></i>
+                            챗봇 상담하기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>홈</span>
+            </a>
+            <a href="products.html" class="nav-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>보험상품</span>
+            </a>
+            <a href="consultation.html" class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>상담예약</span>
+            </a>
+            <a href="faq.html" class="nav-item active">
+                <i class="fas fa-question-circle"></i>
+                <span>자주묻는질문</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <i class="fas fa-robot"></i>
+                <span>보험 상담 도우미</span>
+            </div>
+            <button class="chatbot-close" aria-label="챗봇 닫기">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    안녕하세요! 보험에 대한 궁금한 점이 있으시면 언제든지 물어보세요.
+                </div>
+                <div class="message-time">지금</div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input" placeholder="메시지를 입력하세요..." maxlength="500">
+            <button class="chatbot-send" aria-label="메시지 전송">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    
+    <!-- Consultation Modal -->
+    <div class="modal" id="consultation-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>상담 예약</h3>
+                <button class="modal-close" aria-label="모달 닫기">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="consultation-form" id="consultation-form">
+                    <div class="form-group">
+                        <label for="consultation-name">이름 *</label>
+                        <input type="text" id="consultation-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-phone">연락처 *</label>
+                        <input type="tel" id="consultation-phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-email">이메일</label>
+                        <input type="email" id="consultation-email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-date">희망 상담일 *</label>
+                        <input type="date" id="consultation-date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-time">희망 시간 *</label>
+                        <select id="consultation-time" name="time" required>
+                            <option value="">시간을 선택하세요</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-message">상담 내용</label>
+                        <textarea id="consultation-message" name="message" rows="4" placeholder="상담하고 싶은 내용을 간단히 적어주세요"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-calendar-check"></i>
+                            예약하기
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>예약 완료</h3>
+                <button class="modal-close" aria-label="모달 닫기">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="success-content">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>상담 예약이 완료되었습니다!</h4>
+                    <p>입력하신 연락처로 상담 일정을 확인해드리겠습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="/assets/js/utils.js"></script>
+    <script src="/assets/js/store/state.js"></script>
+    <script src="/assets/js/store/actions.js"></script>
+    <script src="/assets/js/store/reducers.js"></script>
+    <script src="/assets/js/chatbot.js"></script>
+    <script src="/assets/js/app.js"></script>
+</body>
+</html> 

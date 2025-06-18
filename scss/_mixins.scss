@@ -1,0 +1,6 @@
+// 반복되는 스타일 믹스인
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 

@@ -1,0 +1,4 @@
+// 애니메이션 믹스인
+@mixin fade-in {
+  animation: fadeIn 0.5s ease-in;
+} 

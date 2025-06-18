@@ -1,0 +1,38 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.button {
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.hero-section {
+  background: #2b7cff;
+  color: #fff;
+}
+
+.theme-light {
+  background: #fff;
+  color: #222;
+}
+
+.theme-dark {
+  background: #222;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 8px;
+  }
+}
+.chatbot-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+}

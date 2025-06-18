@@ -1,0 +1,312 @@
+{
+  "title": "보험료 계산 규칙",
+  "description": "다양한 보험 상품의 보험료 계산을 위한 규칙과 공식",
+  "version": "1.0.0",
+  "lastUpdated": "2024-01-01",
+  
+  "baseRates": {
+    "life": {
+      "basePremium": 50000,
+      "ageFactors": {
+        "18-25": 0.8,
+        "26-35": 1.0,
+        "36-45": 1.3,
+        "46-55": 1.8,
+        "56-65": 2.5,
+        "66-75": 3.5,
+        "76+": 5.0
+      },
+      "genderFactors": {
+        "male": 1.2,
+        "female": 1.0
+      },
+      "healthFactors": {
+        "excellent": 0.8,
+        "good": 1.0,
+        "average": 1.3,
+        "poor": 2.0
+      },
+      "coverageFactors": {
+        "100000000": 1.0,
+        "200000000": 1.8,
+        "300000000": 2.5,
+        "500000000": 3.8,
+        "1000000000": 6.5
+      }
+    },
+    
+    "health": {
+      "basePremium": 30000,
+      "ageFactors": {
+        "18-25": 0.7,
+        "26-35": 0.9,
+        "36-45": 1.1,
+        "46-55": 1.4,
+        "56-65": 1.8,
+        "66-75": 2.3,
+        "76+": 3.0
+      },
+      "genderFactors": {
+        "male": 1.1,
+        "female": 1.0
+      },
+      "healthFactors": {
+        "excellent": 0.7,
+        "good": 0.9,
+        "average": 1.2,
+        "poor": 1.8
+      },
+      "coverageFactors": {
+        "50000000": 1.0,
+        "100000000": 1.6,
+        "200000000": 2.2,
+        "300000000": 2.8,
+        "500000000": 3.5
+      }
+    },
+    
+    "auto": {
+      "basePremium": 80000,
+      "ageFactors": {
+        "18-25": 1.5,
+        "26-35": 1.2,
+        "36-45": 1.0,
+        "46-55": 0.9,
+        "56-65": 0.8,
+        "66-75": 0.9,
+        "76+": 1.1
+      },
+      "genderFactors": {
+        "male": 1.1,
+        "female": 1.0
+      },
+      "drivingHistoryFactors": {
+        "excellent": 0.7,
+        "good": 0.9,
+        "average": 1.0,
+        "poor": 1.4
+      },
+      "coverageFactors": {
+        "50000000": 1.0,
+        "100000000": 1.3,
+        "200000000": 1.6,
+        "300000000": 1.9,
+        "500000000": 2.3
+      }
+    },
+    
+    "property": {
+      "basePremium": 40000,
+      "propertyValueFactors": {
+        "100000000": 1.0,
+        "200000000": 1.4,
+        "300000000": 1.8,
+        "500000000": 2.2,
+        "1000000000": 2.8
+      },
+      "locationFactors": {
+        "urban": 1.2,
+        "suburban": 1.0,
+        "rural": 0.8
+      },
+      "constructionFactors": {
+        "concrete": 0.9,
+        "brick": 1.0,
+        "wood": 1.3
+      },
+      "securityFactors": {
+        "high": 0.8,
+        "medium": 1.0,
+        "low": 1.2
+      }
+    },
+    
+    "travel": {
+      "basePremium": 15000,
+      "durationFactors": {
+        "1-7": 1.0,
+        "8-14": 1.3,
+        "15-30": 1.6,
+        "31-60": 2.0,
+        "61+": 2.5
+      },
+      "destinationFactors": {
+        "domestic": 0.8,
+        "asia": 1.0,
+        "europe": 1.2,
+        "america": 1.3,
+        "africa": 1.5
+      },
+      "coverageFactors": {
+        "basic": 1.0,
+        "standard": 1.3,
+        "premium": 1.6,
+        "luxury": 2.0
+      }
+    }
+  },
+  
+  "calculationFormulas": {
+    "life": {
+      "formula": "basePremium * ageFactor * genderFactor * healthFactor * coverageFactor",
+      "description": "생명보험료 = 기본보험료 × 나이계수 × 성별계수 × 건강계수 × 보장계수"
+    },
+    "health": {
+      "formula": "basePremium * ageFactor * genderFactor * healthFactor * coverageFactor",
+      "description": "건강보험료 = 기본보험료 × 나이계수 × 성별계수 × 건강계수 × 보장계수"
+    },
+    "auto": {
+      "formula": "basePremium * ageFactor * genderFactor * drivingHistoryFactor * coverageFactor",
+      "description": "자동차보험료 = 기본보험료 × 나이계수 × 성별계수 × 운전경력계수 × 보장계수"
+    },
+    "property": {
+      "formula": "basePremium * propertyValueFactor * locationFactor * constructionFactor * securityFactor",
+      "description": "주택보험료 = 기본보험료 × 재산가치계수 × 지역계수 × 건축재료계수 × 보안계수"
+    },
+    "travel": {
+      "formula": "basePremium * durationFactor * destinationFactor * coverageFactor",
+      "description": "여행보험료 = 기본보험료 × 기간계수 × 목적지계수 × 보장계수"
+    }
+  },
+  
+  "discounts": {
+    "multiPolicy": {
+      "description": "다중 보험 할인",
+      "rate": 0.1,
+      "conditions": ["2개 이상의 보험 가입"]
+    },
+    "loyalty": {
+      "description": "장기 고객 할인",
+      "rates": {
+        "1-2": 0.05,
+        "3-5": 0.1,
+        "6-10": 0.15,
+        "10+": 0.2
+      }
+    },
+    "online": {
+      "description": "온라인 가입 할인",
+      "rate": 0.05
+    },
+    "paperless": {
+      "description": "무서류 할인",
+      "rate": 0.02
+    },
+    "autopay": {
+      "description": "자동이체 할인",
+      "rate": 0.03
+    }
+  },
+  
+  "surcharges": {
+    "highRisk": {
+      "description": "고위험 할증",
+      "rate": 0.3,
+      "conditions": ["과거 사고 이력", "위험 직업"]
+    },
+    "youngDriver": {
+      "description": "신규 운전자 할증",
+      "rate": 0.2,
+      "conditions": ["운전 경력 3년 미만"]
+    },
+    "highValue": {
+      "description": "고가 보장 할증",
+      "rate": 0.15,
+      "conditions": ["보장금액 5억원 이상"]
+    }
+  },
+  
+  "specialRates": {
+    "professionals": {
+      "description": "전문직 할인",
+      "rate": 0.08,
+      "professions": ["의사", "변호사", "회계사", "교사"]
+    },
+    "students": {
+      "description": "학생 할인",
+      "rate": 0.1,
+      "conditions": ["재학증명서 제출"]
+    },
+    "seniors": {
+      "description": "시니어 할인",
+      "rate": 0.05,
+      "conditions": ["65세 이상"]
+    }
+  },
+  
+  "calculationSteps": [
+    {
+      "step": 1,
+      "description": "기본 보험료 확인",
+      "action": "보험 유형에 따른 기본 보험료 설정"
+    },
+    {
+      "step": 2,
+      "description": "개인 요인 적용",
+      "action": "나이, 성별, 건강상태 등 개인 요인 계수 적용"
+    },
+    {
+      "step": 3,
+      "description": "보장 요인 적용",
+      "action": "보장금액, 보장범위 등 보장 관련 계수 적용"
+    },
+    {
+      "step": 4,
+      "description": "할인 적용",
+      "action": "다중보험, 장기고객, 온라인가입 등 할인 적용"
+    },
+    {
+      "step": 5,
+      "description": "할증 적용",
+      "action": "고위험, 신규운전자, 고가보장 등 할증 적용"
+    },
+    {
+      "step": 6,
+      "description": "최종 계산",
+      "action": "모든 요인을 적용한 최종 보험료 계산"
+    }
+  ],
+  
+  "examples": {
+    "lifeInsurance": {
+      "scenario": "35세 남성, 건강상태 좋음, 보장금액 2억원",
+      "calculation": {
+        "basePremium": 50000,
+        "ageFactor": 1.0,
+        "genderFactor": 1.2,
+        "healthFactor": 0.9,
+        "coverageFactor": 1.8,
+        "result": 97200
+      }
+    },
+    "healthInsurance": {
+      "scenario": "28세 여성, 건강상태 매우 좋음, 보장금액 1억원",
+      "calculation": {
+        "basePremium": 30000,
+        "ageFactor": 0.9,
+        "genderFactor": 1.0,
+        "healthFactor": 0.7,
+        "coverageFactor": 1.6,
+        "result": 30240
+      }
+    },
+    "autoInsurance": {
+      "scenario": "42세 남성, 운전경력 우수, 보장금액 1억원",
+      "calculation": {
+        "basePremium": 80000,
+        "ageFactor": 1.0,
+        "genderFactor": 1.1,
+        "drivingHistoryFactor": 0.7,
+        "coverageFactor": 1.3,
+        "result": 80080
+      }
+    }
+  },
+  
+  "disclaimers": [
+    "이 계산기는 참고용이며, 실제 보험료는 보험사 심사 결과에 따라 달라질 수 있습니다.",
+    "특별한 건강상태나 위험요인이 있는 경우 추가 심사가 필요할 수 있습니다.",
+    "할인 및 할증 요인은 보험사 정책에 따라 적용 기준이 다를 수 있습니다.",
+    "최종 보험료는 계약 체결 시 확정됩니다."
+  ]
+} 

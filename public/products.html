@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ko" class="theme-light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="다양한 보험 상품을 비교하고 선택하세요 - 생명보험, 자동차보험, 건강보험 등">
+    <meta name="keywords" content="보험상품, 생명보험, 자동차보험, 건강보험, 주택보험, 비교">
+    <title>보험상품 - 안전한 보험</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/themes.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/chatbot.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">보험 상품을 준비하고 있습니다...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>안전한 보험</span>
+            </div>
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="products.html" class="active">보험상품</a></li>
+                    <li><a href="consultation.html">상담예약</a></li>
+                    <li><a href="faq.html">자주묻는질문</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="테마 변경">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="chatbot-toggle" aria-label="챗봇 열기">
+                    <i class="fas fa-comments"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">보험 상품</h1>
+                <p class="page-description">
+                    다양한 보험 상품을 비교하고 최적의 보험을 선택하세요
+                </p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label for="category-filter">카테고리</label>
+                        <select id="category-filter" class="filter-select">
+                            <option value="">전체</option>
+                            <option value="life">생명보험</option>
+                            <option value="health">건강보험</option>
+                            <option value="auto">자동차보험</option>
+                            <option value="home">주택보험</option>
+                            <option value="travel">여행보험</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="price-filter">보험료</label>
+                        <select id="price-filter" class="filter-select">
+                            <option value="">전체</option>
+                            <option value="low">낮은 보험료</option>
+                            <option value="medium">보통 보험료</option>
+                            <option value="high">높은 보험료</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-filter">정렬</label>
+                        <select id="sort-filter" class="filter-select">
+                            <option value="popular">인기순</option>
+                            <option value="price-low">보험료 낮은순</option>
+                            <option value="price-high">보험료 높은순</option>
+                            <option value="name">이름순</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-outline" id="reset-filters">
+                        <i class="fas fa-undo"></i>
+                        필터 초기화
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="products-section">
+            <div class="container">
+                <div class="products-grid" id="products-grid">
+                    <!-- Life Insurance Products -->
+                    <div class="product-card" data-category="life" data-price="medium" data-popularity="high">
+                        <div class="product-header">
+                            <div class="product-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="product-badge popular">인기</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>가족사랑 생명보험</h3>
+                            <p class="product-description">
+                                가족을 위한 안전한 미래 보장, 다양한 보장 옵션으로 맞춤형 보험
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">사망보장</span>
+                                <span class="feature-tag">질병보장</span>
+                                <span class="feature-tag">만기환급</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-label">월 보험료</span>
+                                <span class="price-amount">₩50,000</span>
+                                <span class="price-note">부터</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary" data-action="view-product" data-product="family-love">
+                                <i class="fas fa-eye"></i>
+                                자세히 보기
+                            </button>
+                            <button class="btn btn-outline" data-action="calculate-premium" data-product="family-love">
+                                <i class="fas fa-calculator"></i>
+                                보험료 계산
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="life" data-price="low" data-popularity="medium">
+                        <div class="product-header">
+                            <div class="product-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>간편생명보험</h3>
+                            <p class="product-description">
+                                간단한 가입 절차와 합리적인 보험료로 기본적인 생명보장
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">사망보장</span>
+                                <span class="feature-tag">간편가입</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-label">월 보험료</span>
+                                <span class="price-amount">₩30,000</span>
+                                <span class="price-note">부터</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary" data-action="view-product" data-product="simple-life">
+                                <i class="fas fa-eye"></i>
+                                자세히 보기
+                            </button>
+                            <button class="btn btn-outline" data-action="calculate-premium" data-product="simple-life">
+                                <i class="fas fa-calculator"></i>
+                                보험료 계산
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Health Insurance Products -->
+                    <div class="product-card" data-category="health" data-price="high" data-popularity="high">
+                        <div class="product-header">
+                            <div class="product-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="product-badge premium">프리미엄</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>종합건강보험</h3>
+                            <p class="product-description">
+                                입원, 수술, 통원치료 등 모든 의료비를 포괄적으로 보장
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">입원보장</span>
+                                <span class="feature-tag">수술보장</span>
+                                <span class="feature-tag">통원보장</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-label">월 보험료</span>
+                                <span class="price-amount">₩80,000</span>
+                                <span class="price-note">부터</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary" data-action="view-product" data-product="comprehensive-health">
+                                <i class="fas fa-eye"></i>
+                                자세히 보기
+                            </button>
+                            <button class="btn btn-outline" data-action="calculate-premium" data-product="comprehensive-health">
+                                <i class="fas fa-calculator"></i>
+                                보험료 계산
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="health" data-price="medium" data-popularity="medium">
+                        <div class="product-header">
+                            <div class="product-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>실비보험</h3>
+                            <p class="product-description">
+                                실제 의료비를 보장하는 실비보험으로 부담을 줄여드립니다
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">실비보장</span>
+                                <span class="feature-tag">입원보장</span>
+                                <span class="feature-tag">통원보장</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-label">월 보험료</span>
+                                <span class="price-amount">₩45,000</span>
+                                <span class="price-note">부터</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary" data-action="view-product" data-product="medical-expense">
+                                <i class="fas fa-eye"></i>
+                                자세히 보기
+                            </button>
+                            <button class="btn btn-outline" data-action="calculate-premium" data-product="medical-expense">
+                                <i class="fas fa-calculator"></i>
+                                보험료 계산
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Auto Insurance Products -->
+                    <div class="product-card" data-category="auto" data-price="medium" data-popularity="high">
+                        <div class="product-header">
+                            <div class="product-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div class="product-badge popular">인기</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>종합자동차보험</h3>
+                            <p class="product-description">
+                                대인배상, 대물배상, 자차손해 등 모든 사고를 보장
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">대인배상</span>
+                                <span class="feature-tag">대물배상</span>
+                                <span class="feature-tag">자차손해</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-label">월 보험료</span>
+                                <span class="price-amount">₩60,000</span>
+                                <span class="price-note">부터</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary" data-action="view-product" data-product="comprehensive-auto">
+                                <i class="fas fa-eye"></i>
+                                자세히 보기
+                            </button>
+                            <button class="btn btn-outline" data-action="calculate-premium" data-product="comprehensive-auto">
+                                <i class="fas fa-calculator"></i>
+                                보험료 계산
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="auto" data-price="low" data-popularity="medium">
+                        <div class="product-header">
+                            <div class="product-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>기본자동차보험</h3>
+                            <p class="product-description">
+                                필수 보장만 포함한 기본적인 자동차보험
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">대인배상</span>
+                                <span class="feature-tag">대물배상</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-label">월 보험료</span>
+                                <span class="price-amount">₩35,000</span>
+                                <span class="price-note">부터</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary" data-action="view-product" data-product="basic-auto">
+                                <i class="fas fa-eye"></i>
+                                자세히 보기
+                            </button>
+                            <button class="btn btn-outline" data-action="calculate-premium" data-product="basic-auto">
+                                <i class="fas fa-calculator"></i>
+                                보험료 계산
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Home Insurance Products -->
+                    <div class="product-card" data-category="home" data-price="medium" data-popularity="medium">
+                        <div class="product-header">
+                            <div class="product-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>주택종합보험</h3>
+                            <p class="product-description">
+                                화재, 도난, 자연재해 등 주택 관련 모든 위험을 보장
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">화재보장</span>
+                                <span class="feature-tag">도난보장</span>
+                                <span class="feature-tag">자연재해</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-label">월 보험료</span>
+                                <span class="price-amount">₩25,000</span>
+                                <span class="price-note">부터</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary" data-action="view-product" data-product="comprehensive-home">
+                                <i class="fas fa-eye"></i>
+                                자세히 보기
+                            </button>
+                            <button class="btn btn-outline" data-action="calculate-premium" data-product="comprehensive-home">
+                                <i class="fas fa-calculator"></i>
+                                보험료 계산
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Travel Insurance Products -->
+                    <div class="product-card" data-category="travel" data-price="low" data-popularity="medium">
+                        <div class="product-header">
+                            <div class="product-icon">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3>해외여행보험</h3>
+                            <p class="product-description">
+                                해외여행 중 발생할 수 있는 의료비, 여행취소 등을 보장
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">의료비보장</span>
+                                <span class="feature-tag">여행취소</span>
+                                <span class="feature-tag">항공기지연</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-label">일 보험료</span>
+                                <span class="price-amount">₩5,000</span>
+                                <span class="price-note">부터</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary" data-action="view-product" data-product="overseas-travel">
+                                <i class="fas fa-eye"></i>
+                                자세히 보기
+                            </button>
+                            <button class="btn btn-outline" data-action="calculate-premium" data-product="overseas-travel">
+                                <i class="fas fa-calculator"></i>
+                                보험료 계산
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results Message -->
+                <div class="no-results" id="no-results" style="display: none;">
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>검색 결과가 없습니다</h3>
+                        <p>다른 조건으로 검색해보세요</p>
+                        <button class="btn btn-primary" id="clear-all-filters">
+                            <i class="fas fa-undo"></i>
+                            모든 필터 초기화
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>맞춤형 보험 상담을 받아보세요</h2>
+                    <p>전문 상담사가 당신에게 최적의 보험을 찾아드립니다</p>
+                    <button class="btn btn-primary btn-large" data-action="open-consultation">
+                        <i class="fas fa-calendar-alt"></i>
+                        무료 상담 예약하기
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>홈</span>
+            </a>
+            <a href="products.html" class="nav-item active">
+                <i class="fas fa-shield-alt"></i>
+                <span>보험상품</span>
+            </a>
+            <a href="consultation.html" class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>상담예약</span>
+            </a>
+            <a href="faq.html" class="nav-item">
+                <i class="fas fa-question-circle"></i>
+                <span>자주묻는질문</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <i class="fas fa-robot"></i>
+                <span>보험 상담 도우미</span>
+            </div>
+            <button class="chatbot-close" aria-label="챗봇 닫기">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    안녕하세요! 보험 상품에 대해 궁금한 점이 있으시면 언제든지 물어보세요.
+                </div>
+                <div class="message-time">지금</div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input" placeholder="메시지를 입력하세요..." maxlength="500">
+            <button class="chatbot-send" aria-label="메시지 전송">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    
+    <!-- Product Detail Modal -->
+    <div class="modal" id="product-detail-modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h3 id="product-detail-title">보험 상품 상세</h3>
+                <button class="modal-close" aria-label="모달 닫기">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="product-detail-body">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Calculator Modal -->
+    <div class="modal" id="calculator-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>보험료 계산기</h3>
+                <button class="modal-close" aria-label="모달 닫기">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="calculator-form" id="calculator-form">
+                    <div class="form-group">
+                        <label for="calculator-age">나이 *</label>
+                        <input type="number" id="calculator-age" name="age" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="calculator-gender">성별 *</label>
+                        <select id="calculator-gender" name="gender" required>
+                            <option value="">선택하세요</option>
+                            <option value="male">남성</option>
+                            <option value="female">여성</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="calculator-coverage">보장금액 *</label>
+                        <select id="calculator-coverage" name="coverage" required>
+                            <option value="">선택하세요</option>
+                            <option value="low">낮은 보장 (1천만원)</option>
+                            <option value="medium">보통 보장 (3천만원)</option>
+                            <option value="high">높은 보장 (5천만원)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="calculator-period">보험기간 *</label>
+                        <select id="calculator-period" name="period" required>
+                            <option value="">선택하세요</option>
+                            <option value="10">10년</option>
+                            <option value="20">20년</option>
+                            <option value="30">30년</option>
+                        </select>
+                    </div>
+                    <div class="calculator-result" id="calculator-result" style="display: none;">
+                        <h4>예상 보험료</h4>
+                        <div class="result-amount" id="result-amount">₩0</div>
+                        <p class="result-note">* 실제 보험료는 상담 후 결정됩니다</p>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i>
+                            보험료 계산하기
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consultation Modal -->
+    <div class="modal" id="consultation-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>상담 예약</h3>
+                <button class="modal-close" aria-label="모달 닫기">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="consultation-form" id="consultation-form">
+                    <div class="form-group">
+                        <label for="consultation-name">이름 *</label>
+                        <input type="text" id="consultation-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-phone">연락처 *</label>
+                        <input type="tel" id="consultation-phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-email">이메일</label>
+                        <input type="email" id="consultation-email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-date">희망 상담일 *</label>
+                        <input type="date" id="consultation-date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-time">희망 시간 *</label>
+                        <select id="consultation-time" name="time" required>
+                            <option value="">시간을 선택하세요</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation-message">상담 내용</label>
+                        <textarea id="consultation-message" name="message" rows="4" placeholder="상담하고 싶은 내용을 간단히 적어주세요"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-calendar-check"></i>
+                            예약하기
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>예약 완료</h3>
+                <button class="modal-close" aria-label="모달 닫기">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="success-content">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>상담 예약이 완료되었습니다!</h4>
+                    <p>입력하신 연락처로 상담 일정을 확인해드리겠습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="/assets/js/utils.js"></script>
+    <script src="/assets/js/store/state.js"></script>
+    <script src="/assets/js/store/actions.js"></script>
+    <script src="/assets/js/store/reducers.js"></script>
+    <script src="/assets/js/chatbot.js"></script>
+    <script src="/assets/js/products.js"></script>
+    <script src="/assets/js/app.js"></script>
+</body>
+</html> 
